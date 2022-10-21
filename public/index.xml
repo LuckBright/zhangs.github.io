@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>我的博客</title>
+        <link>https://luckbright.github.io/</link>
+        <description>这是我搭建的第一个博客网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster>
+            <atom:link href="https://luckbright.github.io/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>
