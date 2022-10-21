@@ -4,7 +4,15 @@
         <link>https://luckbright.github.io/zhangs.github.io/</link>
         <description>这是我搭建的第一个博客网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
-            <webMaster>2402536045@qq.com (Dododo)</webMaster>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</lastBuildDate>
             <atom:link href="https://luckbright.github.io/zhangs.github.io/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>My First Post</title>
+    <link>https://luckbright.github.io/zhangs.github.io/my-first-post/</link>
+    <pubDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/my-first-post/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
