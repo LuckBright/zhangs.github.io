@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>luckbright</title>
-        <link>https://luckbright.github.io/zhangs.github.io/</link>
-        <description>记录我的一些学习笔记</description>
+        <title>javaScript基础 - 标签 - luckbright</title>
+        <link>https://luckbright.github.io/zhangs.github.io/tags/javascript%E5%9F%BA%E7%A1%80/</link>
+        <description>javaScript基础 - 标签 - luckbright</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
-            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</lastBuildDate>
-            <atom:link href="https://luckbright.github.io/zhangs.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/tags/javascript%E5%9F%BA%E7%A1%80/" rel="self" type="application/rss+xml" /><item>
     <title>定时器</title>
     <link>https://luckbright.github.io/zhangs.github.io/%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
     <pubDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</pubDate>

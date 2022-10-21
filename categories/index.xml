@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - 分类 - 我的博客</title>
+        <title>Categories - 分类 - luckbright</title>
         <link>https://luckbright.github.io/zhangs.github.io/categories/</link>
-        <description>Categories - 分类 - 我的博客</description>
+        <description>Categories - 分类 - luckbright</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
             <webMaster>2402536045@qq.com (Dododo)</webMaster><atom:link href="https://luckbright.github.io/zhangs.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>

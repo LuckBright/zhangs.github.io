@@ -1,24 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 我的博客</title>
+        <title>所有文章 - luckbright</title>
         <link>https://luckbright.github.io/zhangs.github.io/posts/</link>
-        <description>所有文章 | 我的博客</description>
+        <description>所有文章 | luckbright</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
             <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>javaScript 编程</title>
-    <link>https://luckbright.github.io/zhangs.github.io/javascript-%E7%BC%96%E7%A8%8B/</link>
+    <title>定时器</title>
+    <link>https://luckbright.github.io/zhangs.github.io/%E5%AE%9A%E6%97%B6%E5%99%A8/</link>
     <pubDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</pubDate>
     <author>Dododo</author>
-    <guid>https://luckbright.github.io/zhangs.github.io/javascript-%E7%BC%96%E7%A8%8B/</guid>
-    <description><![CDATA[javaScript 编程 函数进阶 定时器]]></description>
-</item>
-<item>
-    <title>My First Post</title>
-    <link>https://luckbright.github.io/zhangs.github.io/my-first-post/</link>
-    <pubDate>Fri, 21 Oct 2022 09:37:42 &#43;0800</pubDate>
-    <author>Dododo</author>
-    <guid>https://luckbright.github.io/zhangs.github.io/my-first-post/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://luckbright.github.io/zhangs.github.io/%E5%AE%9A%E6%97%B6%E5%99%A8/</guid>
+    <description><![CDATA[定时器 什么是定时器？使用场景？ **别称：**又称为 调度 、计划调用（scheduling a call） 、定时器。 **使用场景：**当我们不想立即]]></description>
 </item>
 </channel>
 </rss>
