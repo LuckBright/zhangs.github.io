@@ -17,7 +17,7 @@ jobs:
         token: ${{ secrets.CHECKOUT_TOKEN }}
 
     - name: Markdown From Notion
-      uses: akkuman/notion_to_github_blog@master
+      uses: LuckBright/zhangs.github.io@main
       with:
         notion_token: ${{ secrets.NOTION_TOKEN }}
         notion_database_id: ${{ secrets.NOTION_DATABASE_ID }}
@@ -28,9 +28,9 @@ jobs:
         # ref: https://github.com/actions/first-interaction/issues/10#issuecomment-546628432
         # ref: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
         # so you should set another token
-        img_store_github_token: ${{ secrets.CHECKOUT_TOKEN }}
-        img_store_github_repo: akkuman/pic
-        img_store_github_branch: master
+        # img_store_github_token: ${{ secrets.CHECKOUT_TOKEN }}
+        # img_store_github_repo: akkuman/pic
+        # img_store_github_branch: master
         # md_store_path_prefix: ${{ secrets.MD_STORE_PATH_PREFIX }}
 
     - name: push to github
