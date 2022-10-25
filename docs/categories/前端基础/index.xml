@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>前端基础 - 分类 - luckbright</title>
+        <link>https://luckbright.github.io/zhangs.github.io/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/</link>
+        <description>前端基础 - 分类 - luckbright</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Mon, 24 Oct 2022 05:58:00 &#43;0000</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" rel="self" type="application/rss+xml" /><item>
+    <title>测试自动化</title>
+    <link>https://luckbright.github.io/zhangs.github.io/htmlcss/</link>
+    <pubDate>Mon, 24 Oct 2022 05:58:00 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/htmlcss/</guid>
+    <description><![CDATA[HTML &amp;&amp; CSS HTML5 新特性、语义化 概念： HTML5的语义化指的是合理正确的使用语义化的标签来创建页面结构。【正确的标签做正确的事】 语义化标签： header nav main article section]]></description>
+</item>
+</channel>
+</rss>
