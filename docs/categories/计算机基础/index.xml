@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>计算机基础 - 分类 - luckbright</title>
+        <link>https://luckbright.github.io/zhangs.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+        <description>计算机基础 - 分类 - luckbright</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Wed, 26 Oct 2022 08:10:00 &#43;0000</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="self" type="application/rss+xml" /><item>
+    <title>计算机网络</title>
+    <link>https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Wed, 26 Oct 2022 08:10:00 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+    <description><![CDATA[HTTP 和 HTTPS HTTP 的基本概念 http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从 WWW 服务器传输超文本到本地浏]]></description>
+</item>
+</channel>
+</rss>

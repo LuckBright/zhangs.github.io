@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>计算机网络 - luckbright</title><meta name="Description" content="记录我的一些学习笔记"><meta property="og:title" content="计算机网络" />
+<meta property="og:description" content="HTTP 和 HTTPS HTTP 的基本概念 http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从 WWW 服务器传输超文本到本地浏" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" /><meta property="og:image" content="https://luckbright.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-26T08:10:00+00:00" />
+<meta property="article:modified_time" content="2022-10-26T08:10:00+00:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://luckbright.github.io/logo.png"/>
+
+<meta name="twitter:title" content="计算机网络"/>
+<meta name="twitter:description" content="HTTP 和 HTTPS HTTP 的基本概念 http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从 WWW 服务器传输超文本到本地浏"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" /><link rel="prev" href="https://luckbright.github.io/zhangs.github.io/%E6%9C%89%E5%9B%BE%E7%89%87%E7%9A%84/" /><link rel="stylesheet" href="/zhangs.github.io/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "计算机网络",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/luckbright.github.io\/zhangs.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C\/"
+        },"image": ["https:\/\/luckbright.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "计算机基础","wordcount":  4478 ,
+        "url": "https:\/\/luckbright.github.io\/zhangs.github.io\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C\/","datePublished": "2022-10-26T08:10:00+00:00","dateModified": "2022-10-26T08:10:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/luckbright.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Dododo"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zhangs.github.io/" title="luckbright"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zhangs.github.io/posts/"> 所有文章 </a><a class="menu-item" href="/zhangs.github.io/tags/"> 标签 </a><a class="menu-item" href="/zhangs.github.io/zhangs.github.io/categories/"> 分类 </a><a class="menu-item" href="/zhangs.github.io/zhangs.github.io/about/"> 关于 </a><a class="menu-item" href="https://github.com/luckbright" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i> Github </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zhangs.github.io/" title="luckbright"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zhangs.github.io/posts/" title="">所有文章</a><a class="menu-item" href="/zhangs.github.io/tags/" title="">标签</a><a class="menu-item" href="/zhangs.github.io/zhangs.github.io/categories/" title="">分类</a><a class="menu-item" href="/zhangs.github.io/zhangs.github.io/about/" title="">关于</a><a class="menu-item" href="https://github.com/luckbright" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>Github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">计算机网络</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/zhangs.github.io/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Dododo</a></span>&nbsp;<span class="post-category">收录于 <a href="/zhangs.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>计算机基础</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-26">2022-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4478 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="leancloud_visitors" data-flag-title="计算机网络">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#http-和-https">HTTP 和 HTTPS</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#http-的基本概念">HTTP 的基本概念</a></li>
+            <li><a href="#http工作原理">HTTP工作原理</a></li>
+            <li><a href="#http请求响应的步骤">HTTP请求/响应的步骤</a></li>
+            <li><a href="#http-的-5-种方法">HTTP 的 5 种方法</a></li>
+            <li><a href="#get与post的区别">GET与POST的区别</a></li>
+            <li><a href="#http报文的组成成分">HTTP报文的组成成分</a></li>
+            <li><a href="#https-的基本概念">https 的基本概念</a></li>
+            <li><a href="#http-和-https-的区别">http 和 https 的区别？</a></li>
+            <li><a href="#https-协议的工作原理">https 协议的工作原理</a></li>
+            <li><a href="#https-协议的优缺点">https 协议的优缺点</a></li>
+            <li><a href="#tcpip网络模型">TCP/IP网络模型</a></li>
+            <li><a href="#tcp三次握手">TCP三次握手</a></li>
+            <li><a href="#tcp-四次挥手">TCP 四次挥手</a></li>
+            <li><a href="#tcp和udp的区别">TCP和UDP的区别</a></li>
+            <li><a href="#http-请求跨域问题">HTTP 请求跨域问题</a></li>
+            <li><a href="#cookiesessionstoragelocalstorage-的区别">Cookie、sessionStorage、localStorage 的区别</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="http-和-https">HTTP 和 HTTPS</h1>
+<h3 id="http-的基本概念">HTTP 的基本概念</h3>
+<p>http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端<code>请求和应答的标准（TCP）</code>，用于从 WWW 服务器传输超文本到本地浏览器的<code>超文本传输协议</code>。</p>
+<h3 id="http工作原理">HTTP工作原理</h3>
+<p>HTTP协议定义Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。客户端向服务器发送一个请求报文，服务器以一个状态行作为响应。</p>
+<h3 id="http请求响应的步骤">HTTP请求/响应的步骤</h3>
+<ul>
+<li>
+<p>1.客户端连接到Web服务器</p>
+</li>
+<li>
+<p>2.发送HTTP请求</p>
+</li>
+<li>
+<p>3.服务器接受请求并返回HTTP响应</p>
+</li>
+<li>
+<p>4.释放TCP连接</p>
+</li>
+<li>
+<p>5.客户端（浏览器）解析HTML内容</p>
+</li>
+</ul>
+<blockquote>
+<p>记忆口诀：连接发送加响应，释放解析整过程。</p>
+</blockquote>
+<h3 id="http-的-5-种方法">HTTP 的 5 种方法</h3>
+<ul>
+<li>
+<p>GET&mdash;获取资源</p>
+</li>
+<li>
+<p>POST&mdash;传输资源</p>
+</li>
+<li>
+<p>PUT&mdash;更新资源</p>
+</li>
+<li>
+<p>DELETE&mdash;删除资源</p>
+</li>
+<li>
+<p>HEAD&mdash;获取报文首部</p>
+</li>
+</ul>
+<h3 id="get与post的区别">GET与POST的区别</h3>
+<p><strong>1.浏览器回退表现不同</strong> GET在浏览器回退时是无害的，而POST会再次提交请求
+<strong>2.浏览器对请求地址的处理不同</strong> GET请求地址会被浏览器主动缓存，而POST不会，除非手动设置
+<strong>3.浏览器对响应的处理不同</strong>GET请求参数会被完整的保留在浏览器历史记录里，而POST中的参数不会被保留
+<strong>4.参数大小不同.</strong> GET请求在URL中传送的参数是有长度的限制，而POST没有限制
+<strong>5.安全性不同.</strong> GET参数通过URL传递，会暴露，不安全；POST放在Request Body中，相对更安全
+<strong>6.针对数据操作的类型不同</strong>.GET对数据进行查询，POST主要对数据进行增删改！简单说，GET是只读，POST是写。</p>
+<h3 id="http报文的组成成分">HTTP报文的组成成分</h3>
+<p>请求报文{ 请求行、请求头、空行、请求体 } 请求行：{http方法、页面地址、http协议、http版本} 响应报文{ 状态行、响应头、空行、响应体 }</p>
+<p><strong>Request Header:</strong></p>
+<ol>
+<li>
+<p><strong>GET /sample.Jsp HTTP/1.1</strong> //请求行</p>
+</li>
+<li>
+<p><strong>Host:</strong> www.uuid.online/ //请求的目标域名和端口号</p>
+</li>
+<li>
+<p><strong>Origin:</strong> <a href="http://localhost:8081/" target="_blank" rel="noopener noreffer ">http://localhost:8081/</a> //请求的来源域名和端口号 （跨域请求时，浏览器会自动带上这个头信息）</p>
+</li>
+<li>
+<p><strong>Referer:</strong> <a href="https://localhost:8081/link?query=xxxxx" target="_blank" rel="noopener noreffer ">https://localhost:8081/link?query=xxxxx</a> //请求资源的完整URI</p>
+</li>
+<li>
+<p><strong>User-Agent:</strong> Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 //浏览器信息</p>
+</li>
+<li>
+<p><strong>Cookie:</strong> BAIDUID=FA89F036:FG=1; BD_HOME=1; sugstore=0 //当前域名下的Cookie</p>
+</li>
+<li>
+<p><strong>Accept:</strong> text/html,image/apng //代表客户端希望接受的数据类型是html或者是png图片类型</p>
+</li>
+<li>
+<p><strong>Accept-Encoding:</strong> gzip, deflate //代表客户端能支持gzip和deflate格式的压缩</p>
+</li>
+<li>
+<p><strong>Accept-Language:</strong> zh-CN,zh;q=0.9 //代表客户端可以支持语言zh-CN或者zh(值得一提的是q(0~1)是优先级权重的意思，不写默认为1，这里zh-CN是1，zh是0.9)</p>
+</li>
+<li>
+<p><strong>Connection:</strong> keep-alive //告诉服务器，客户端需要的tcp连接是一个长连接</p>
+</li>
+</ol>
+<p><strong>Response Header:</strong></p>
+<ol>
+<li>
+<p><strong>HTTP/1.1 200 OK</strong> // 响应状态行</p>
+</li>
+<li>
+<p><strong>Date:</strong> Mon, 30 Jul 2018 02:50:55 GMT //服务端发送资源时的服务器时间</p>
+</li>
+<li>
+<p><strong>Expires:</strong> Wed, 31 Dec 1969 23:59:59 GMT //比较过时的一种验证缓存的方式，与浏览器（客户端）的时间比较，超过这个时间就不用缓存（不和服务器进行验证），适合版本比较稳定的网页</p>
+</li>
+<li>
+<p><strong>Cache-Control:</strong> no-cache // 现在最多使用的控制缓存的方式，会和服务器进行缓存验证，具体见<a href="https://www.cnblogs.com/amiezhang/p/9389537.html" target="_blank" rel="noopener noreffer ">博文”Cache-Control“</a></p>
+</li>
+<li>
+<p><strong>etag:</strong> &ldquo;fb8ba2f80b1d324bb997cbe188f28187-ssl-df&rdquo; // 一般是<a href="http://www.t086.com/article/5207" target="_blank" rel="noopener noreffer ">Nginx静态服务器</a>发来的静态文件签名，浏览在没有“Disabled cache”情况下，接收到etag后，同一个url第二次请求就会自动带上“If-None-Match”</p>
+</li>
+<li>
+<p><strong>Last-Modified:</strong> Fri, 27 Jul 2018 11:04:55 GMT //是服务器发来的当前资源最后一次修改的时间，下次请求时，如果服务器上当前资源的修改时间大于这个时间，就返回新的资源内容</p>
+</li>
+<li>
+<p><strong>Content-Type:</strong> text/html; charset=utf-8 //如果返回是流式的数据，我们就必须告诉浏览器这个头，不然浏览器会下载这个页面，同时告诉浏览器是utf8编码，否则可能出现乱码</p>
+</li>
+<li>
+<p><strong>Content-Encoding:</strong> gzip //告诉客户端，应该采用gzip对资源进行解码</p>
+</li>
+<li>
+<p><strong>Connection:</strong> keep-alive //告诉客户端服务器的tcp连接也是一个长连接</p>
+</li>
+</ol>
+<h3 id="https-的基本概念">https 的基本概念</h3>
+<p>https:是以安全为目标的 HTTP 通道，即 HTTP 下 加入 SSL 层进行加密。</p>
+<p>https 协议的作用：建立一个信息安全通道，来确保数据的传输，确保网站的真实性。</p>
+<h3 id="http-和-https-的区别">http 和 https 的区别？</h3>
+<ul>
+<li>
+<p>http 是超文本传输协议，信息是明文传输，https 则是具有安全性的 ssl 加密传输协议。</p>
+</li>
+<li>
+<p>Https 协议需要 ca 证书，费用较高。</p>
+</li>
+<li>
+<p>使用不同的链接方式，端口也不同，一般，http 协议的端口为 80，https 的端口为 443。</p>
+</li>
+<li>
+<p>http 的连接很简单，是无状态的。</p>
+</li>
+</ul>
+<blockquote>
+<p>记忆口诀：明文传输超文本，安全等级各不同。CA证书费用高，无状连接端难同。</p>
+</blockquote>
+<h3 id="https-协议的工作原理">https 协议的工作原理</h3>
+<p>客户端在使用 HTTPS 方式与 Web 服务器通信时有以下几个步骤：</p>
+<ol>
+<li>
+<p>客户端使用 https url 访问服务器，则要求 web 服务器<code>建立 ssl 链接</code>。</p>
+</li>
+<li>
+<p>web 服务器接收到客户端的请求之后，会<code>将网站的证书（证书中包含了公钥），传输给客户端</code>。</p>
+</li>
+<li>
+<p>客户端和 web 服务器端开始<code>协商 SSL 链接的安全等级</code>，也就是加密等级。</p>
+</li>
+<li>
+<p>客户端浏览器通过双方协商一致的安全等级，<code>建立会话密钥</code>，然后通过网站的公钥来加密会话密钥，并传送给网站。</p>
+</li>
+<li>
+<p>web 服务器<code>通过自己的私钥解密出会话密钥</code>。</p>
+</li>
+<li>
+<p>web 服务器<code>通过会话密钥加密与客户端之间的通信</code>。</p>
+</li>
+</ol>
+<blockquote>
+<p>记忆口诀：一连二传三协商，四建五得六使用。</p>
+</blockquote>
+<h3 id="https-协议的优缺点">https 协议的优缺点</h3>
+<ul>
+<li>
+<p>HTTPS 协议要比 http 协议<code>安全</code>，可防止数据在传输过程中被窃取、改变，确保数据的完整性。</p>
+</li>
+<li>
+<p>https 握手阶段比较<code>费时</code>，会使页面加载时间延长 50%，增加 10%~20%的耗电。</p>
+</li>
+<li>
+<p>https <code>缓存</code>不如 http 高效，会增加数据开销。</p>
+</li>
+<li>
+<p>SSL 证书也需要钱，功能越强大的<code>证书费</code>用越高。</p>
+</li>
+<li>
+<p>SSL 证书需要绑定 <code>IP</code>，不能再同一个 ip 上绑定多个域名，ipv4 资源支持不了这种消耗。</p>
+</li>
+</ul>
+<h3 id="tcpip网络模型">TCP/IP网络模型</h3>
+<p>TCP/IP模型是互联网的基础，它是一系列网络协议的总称。这些协议可以划分为四层，分别为链路层、网络层、传输层和应用层。</p>
+<ul>
+<li>
+<p>链路层：负责封装和解封装IP报文，发送和接受ARP/RARP报文等。</p>
+</li>
+<li>
+<p>网络层：负责路由以及把分组报文发送给目标网络或主机。</p>
+</li>
+<li>
+<p>传输层：负责对报文进行分组和重组，并以TCP或UDP协议格式封装报文。</p>
+</li>
+<li>
+<p>应用层：负责向用户提供应用程序，比如HTTP、FTP、Telnet、DNS、SMTP等。</p>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/zhangs.github.io/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image"
+        data-srcset="https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image, https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image 1.5x, https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image"
+        title="https://raw.githubusercontent.com/LuckBright/uPicImage/main/notionimg/e0/26/e0264c90adba2d59c7205f1017b181b6.image" /></p>
+<h3 id="tcp三次握手">TCP三次握手</h3>
+<ol>
+<li>
+<p>第一次握手：<code>建立连接时，客户端发送syn包（syn=j）到服务器，并进入SYN_SENT状态，等待服务器确认</code>；SYN：同步序列编号（Synchronize Sequence Numbers）。</p>
+</li>
+<li>
+<p>第二次握手：<code>服务器收到syn包并确认客户的SYN</code>（ack=j+1），<code>同时也发送一个自己的SYN包</code>（syn=k），即SYN+ACK包，此时服务器进入SYN_RECV状态；</p>
+</li>
+<li>
+<p>第三次握手：<code>客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(ack=k+1）</code>，此包发送完毕，客户端和服务器进入ESTABLISHED（TCP连接成功）状态，完成三次握手。</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="tcp-四次挥手">TCP 四次挥手</h3>
+<ol>
+<li><code>客户端进程发出连接释放报文</code>，并且停止发送数据。释放数据报文首部，FIN=1，其序列号为seq=u（等于前面已经传送过来的数据的最后一个字节的序号加1），此时，客户端进入FIN-WAIT-1（终止等待1）状态。 TCP规定，FIN报文段即使不携带数据，也要消耗一个序号。</li>
+</ol>
+<p>2）<code>服务器收到连接释放报文，发出确认报文</code>，ACK=1，ack=u+1，并且带上自己的序列号seq=v，此时，服务端就进入了CLOSE-WAIT（关闭等待）状态。TCP服务器通知高层的应用进程，客户端向服务器的方向就释放了，这时候处于半关闭状态，即客户端已经没有数据要发送了，但是服务器若发送数据，客户端依然要接受。这个状态还要持续一段时间，也就是整个CLOSE-WAIT状态持续的时间。</p>
+<p>3）客户端收到服务器的确认请求后，此时，客户端就进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文（在这之前还需要接受服务器发送的最 后的数据）。</p>
+<p>4）<code>服务器将最后的数据发送完毕后，就向客户端发送连接释放报文</code>，FIN=1，ack=u+1，由于在半关闭状态，服务器很可能又发送了一些数据，假定此时的序列号为seq=w，此时，服务器就进入了LAST-ACK（最后确认）状态，等待客户端的确认。</p>
+<p>5）<code>客户端收到服务器的连接释放报文后，必须发出确认</code>，ACK=1，ack=w+1，而自己的序列号是seq=u+1，此时，客户端就进入了TIME-WAIT（时间等待）状态。注意此时TCP连接还没有释放，必须经过2∗∗MSL（最长报文段寿命）的时间后，当客户端撤销相应的TCB后，才进入CLOSED状态。</p>
+<p>6）服务器只要收到了客户端发出的确认，立即进入CLOSED状态。同样，撤销TCB后，就结束了这次的TCP连接。可以看到，服务器结束TCP连接的时间要比客户端早一些。</p>
+<h3 id="tcp和udp的区别">TCP和UDP的区别</h3>
+<ol>
+<li>
+<p>TCP是面向<code>连接</code>的，而UDP是面向无连接的。</p>
+</li>
+<li>
+<p>TCP仅支持<code>单播传输</code>，UDP 提供了单播，多播，广播的功能。</p>
+</li>
+<li>
+<p>TCP的三次握手保证了连接的<code>可靠性</code>; UDP是无连接的、不可靠的一种数据传输协议，首先不可靠性体现在无连接上，通信都不需要建立连接，对接收到的数据也不发送确认信号，发送端不知道数据是否会正确接收。</p>
+</li>
+<li>
+<p>UDP的<code>头部开销</code>比TCP的更小，数据<code>传输速率更高</code>，<code>实时性更好</code>。</p>
+</li>
+</ol>
+<h3 id="http-请求跨域问题">HTTP 请求跨域问题</h3>
+<ol>
+<li>跨域的原理</li>
+</ol>
+<p><strong>跨域</strong>，是指浏览器不能执行其他网站的脚本。它是由浏览器的<code>同源策略</code>造成的。<br>
+<strong>同源策略</strong>,是浏览器对 JavaScript 实施的安全限制，只要<code>协议、域名、端口</code>有任何一个不同，都被当作是不同的域。<br>
+<strong>跨域原理</strong>，即是通过各种方式，<code>避开浏览器的安全限制</code>。</p>
+<ol>
+<li>解决方案</li>
+</ol>
+<p>最初做项目的时候，使用的是jsonp，但存在一些问题，使用get请求不安全，携带数据较小，后来也用过iframe，但只有主域相同才行，也是存在些问题，后来通过了解和学习发现使用代理和proxy代理配合起来使用比较方便，就引导后台按这种方式做下服务器配置，在开发中使用proxy，在服务器上使用nginx代理，这样开发过程中彼此都方便，效率也高；现在h5新特性还有 windows.postMessage()</p>
+<ul>
+<li>
+<p><strong>JSONP</strong>：<br>
+ajax 请求受同源策略影响，不允许进行跨域请求，而 script 标签 src 属性中的链 接却可以访问跨域的 js 脚本，利用这个特性，服务端不再返回 JSON 格式的数据，而是 返回一段调用某个函数的 js 代码，在 src 中进行了调用，这样实现了跨域。</p>
+<p>步骤：</p>
+<ol>
+<li>
+<p>去创建一个script标签</p>
+</li>
+<li>
+<p>script的src属性设置接口地址</p>
+</li>
+<li>
+<p>接口参数，必须要带一个自定义函数名，要不然后台无法返回数据</p>
+</li>
+<li>
+<p>通过定义函数名去接受返回的数据</p>
+<p>//动态创建 script
+var script = document.createElement(&lsquo;script&rsquo;);</p>
+<p>// 设置回调函数
+function getData(data) {
+console.log(data);
+}</p>
+<p>//设置 script 的 src 属性，并设置请求地址
+script.src = &lsquo;<a href="http://localhost:3000/?callback=getData" target="_blank" rel="noopener noreffer ">http://localhost:3000/?callback=getData</a>';</p>
+<p>// 让 script 生效
+document.body.appendChild(script);</p>
+</li>
+</ol>
+<p><strong>JSONP 的缺点</strong>:<br>
+JSON 只支持 get，因为 script 标签只能使用 get 请求； JSONP 需要后端配合返回指定格式的数据。</p>
+</li>
+<li>
+<p><strong>document.domain</strong> 基础域名相同 子域名不同</p>
+</li>
+<li>
+<p><strong><a href="http://window.name/" target="_blank" rel="noopener noreffer ">window.name</a></strong> 利用在一个浏览器窗口内，载入所有的域名都是共享一个 <a href="http://window.name/" target="_blank" rel="noopener noreffer ">window.name</a></p>
+</li>
+<li>
+<p><strong>CORS</strong> CORS(Cross-origin resource sharing)跨域资源共享 服务器设置对CORS的支持原理：服务器设置Access-Control-Allow-Origin HTTP响应头之后，浏览器将会允许跨域请求</p>
+</li>
+<li>
+<p><strong>proxy代理</strong> 目前常用方式</p>
+</li>
+<li>
+<p><strong>window.postMessage()</strong> 利用h5新特性 window.postMessage()</p>
+</li>
+<li>
+<p><strong>Websocket</strong></p>
+</li>
+</ul>
+<h3 id="cookiesessionstoragelocalstorage-的区别">Cookie、sessionStorage、localStorage 的区别</h3>
+<p><strong>相同点</strong>：</p>
+<ul>
+<li>存储在客户端</li>
+</ul>
+<p><strong>不同点</strong>：</p>
+<ul>
+<li>
+<p>cookie数据大小不能超过4k；sessionStorage和localStorage的存储比cookie大得多，可以达到5M+</p>
+</li>
+<li>
+<p>cookie设置的过期时间之前一直有效；localStorage永久存储，浏览器关闭后数据不丢失除非主动删除数据；sessionStorage数据在当前浏览器窗口关闭后自动删除</p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-10-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-title="计算机网络" data-hashtags="计算机基础"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-hashtag="计算机基础"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-title="计算机网络"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-title="计算机网络"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-title="计算机网络"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/zhangs.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zhangs.github.io/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zhangs.github.io/%E6%9C%89%E5%9B%BE%E7%89%87%E7%9A%84/" class="prev" rel="prev" title="测试带有图片的自动化脚本"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>测试带有图片的自动化脚本</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zhangs.github.io/" target="_blank">Dododo</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/zhangs.github.io/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"cIRpq8figzQxyGz5LyAdUahJ-gzGzoHsz","appKey":"T9YWfgGhznKaXXx7TCLxzS3C","avatar":"robohash","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":true,"meta":true,"pageSize":true,"placeholder":"说点什么吧...","recordIP":true,"visitor":true}},"data":{"id-1":"luckbright","id-2":"luckbright"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/zhangs.github.io/js/theme.min.js"></script></body>
+</html>
