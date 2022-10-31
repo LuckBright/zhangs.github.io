@@ -129,7 +129,7 @@ enableEmoji = true
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = "2402536045@qq.com"
           # 主页显示头像的 URL
-          avatarURL = "images/avatar.png"
+          avatarURL = "/images/SCR-20221031-jdb.png"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = ""
           # 主页显示的网站副标题
@@ -274,13 +274,13 @@ enableEmoji = true
     pagePV = true
 
   [params.reward]                                         # 文章打赏
-    enable = true
+    enable = false
     wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
     alipay = "/path/to/your/alipay-qr-code.png"    
   # Footer config
   # 页面底部信息配置
   [params.footer]
-    enable = true
+    enable = false
     # Custom content (HTML format is supported)
     # 自定义内容 (支持 HTML 格式)
     custom = ''

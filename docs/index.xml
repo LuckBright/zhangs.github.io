@@ -4,9 +4,17 @@
         <link>https://luckbright.github.io/zhangs.github.io/</link>
         <description>记录我的一些学习笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
-            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Wed, 26 Oct 2022 08:10:00 &#43;0000</lastBuildDate>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Thu, 27 Oct 2022 09:29:52 &#43;0000</lastBuildDate>
             <atom:link href="https://luckbright.github.io/zhangs.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title></title>
+    <link>https://luckbright.github.io/zhangs.github.io/about/</link>
+    <pubDate>Thu, 27 Oct 2022 09:29:52 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/about/</guid>
+    <description><![CDATA[一个佛系的前端程序员！]]></description>
+</item>
+<item>
     <title>计算机网络</title>
     <link>https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
     <pubDate>Wed, 26 Oct 2022 08:10:00 &#43;0000</pubDate>
