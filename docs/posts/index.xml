@@ -4,8 +4,32 @@
         <link>https://luckbright.github.io/zhangs.github.io/posts/</link>
         <description>所有文章 | luckbright</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2402536045@qq.com (Dododo)</managingEditor>
-            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Mon, 24 Oct 2022 05:58:00 &#43;0000</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>测试自动化</title>
+            <webMaster>2402536045@qq.com (Dododo)</webMaster><lastBuildDate>Wed, 09 Nov 2022 06:13:00 &#43;0000</lastBuildDate><atom:link href="https://luckbright.github.io/zhangs.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SVG组件封装</title>
+    <link>https://luckbright.github.io/zhangs.github.io/svg%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/</link>
+    <pubDate>Wed, 09 Nov 2022 06:13:00 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/svg%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/</guid>
+    <description><![CDATA[关键插件安装 1 yarn add vite-plugin-svg-icons -D 所有svg 文件都存放在固定的路径，我这里的路径为 1 src/assets/svg vite.config.ts 1 2 3 4 5 6 7 8 9 10 11 12 13 import { createSvgIconsPlugin } from &#39;vite-plugin-svg-icons&#39; export default defineconfig({ plugin: [ /** svg 文件导入 */ createSvgIconsPlugin({]]></description>
+</item>
+<item>
+    <title>计算机网络</title>
+    <link>https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Wed, 26 Oct 2022 08:10:00 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+    <description><![CDATA[HTTP 和 HTTPS HTTP 的基本概念 http: 是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从 WWW 服务器传输超文本到本地浏]]></description>
+</item>
+<item>
+    <title>测试带有图片的自动化脚本</title>
+    <link>https://luckbright.github.io/zhangs.github.io/%E6%9C%89%E5%9B%BE%E7%89%87%E7%9A%84/</link>
+    <pubDate>Wed, 26 Oct 2022 07:38:00 &#43;0000</pubDate>
+    <author>Dododo</author>
+    <guid>https://luckbright.github.io/zhangs.github.io/%E6%9C%89%E5%9B%BE%E7%89%87%E7%9A%84/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>HTML&amp;&amp;CSS</title>
     <link>https://luckbright.github.io/zhangs.github.io/htmlcss/</link>
     <pubDate>Mon, 24 Oct 2022 05:58:00 &#43;0000</pubDate>
     <author>Dododo</author>
